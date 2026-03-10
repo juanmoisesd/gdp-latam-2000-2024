@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:'Segoe UI',Arial,sans-serif;line-height:1.7}
+a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}
+nav{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+nav .logo{font-weight:700;font-size:1.05em;color:#f0f6fc;margin-right:10px;white-space:nowrap}
+nav a{color:#8b949e;font-size:.8em;padding:4px 8px;border-radius:4px;white-space:nowrap}
+nav a:hover,nav a.active{background:#21262d;color:#58a6ff;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px}
+h1{font-size:1.9em;color:#f0f6fc;margin-bottom:8px}
+h2{font-size:1.35em;color:#e6edf3;margin:28px 0 12px;border-bottom:1px solid #30363d;padding-bottom:6px}
+h3{font-size:1.1em;color:#cdd9e5;margin:18px 0 8px}
+.subtitle{color:#8b949e;font-size:1.05em;margin-bottom:20px}
+.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:3px 12px;font-size:.8em;color:#8b949e;margin:0 4px 4px 0}
+.abstract{background:#161b22;border-left:4px solid #3fb950;border-radius:0 8px 8px 0;padding:18px 20px;margin:20px 0;font-size:.97em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;text-align:center}
+.kpi .val{font-size:2em;font-weight:700;color:#3fb950}
+.kpi .lbl{font-size:.82em;color:#8b949e;margin-top:4px}
+.chart-wrap{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:16px 0}
+.citation{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:18px;margin:20px 0;font-size:.85em}
+.citation pre{background:#0d1117;border-radius:6px;padding:12px;overflow-x:auto;white-space:pre-wrap;font-size:.9em;color:#7ee787}
+table{width:100%;border-collapse:collapse;font-size:.88em;margin:10px 0}
+th{background:#21262d;color:#cdd9e5;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d}
+td{padding:8px 8px;border-bottom:1px solid #21262d;color:#8b949e}
+tr:hover td{background:#161b22;color:#c9d1d9}
+footer{background:#161b22;border-top:1px solid #30363d;padding:20px;text-align:center;color:#484f58;font-size:.85em;margin-top:40px}
+</style>
+<title>📋 Metodología — PIB América Latina 2000-2024</title>
+</head><body>
+<nav><span class="logo">📈 PIB Latinoamérica 2000-2024</span><a href="index.html" >🏠 Inicio</a><a href="pib-nominal.html" >💰 PIB Nominal</a><a href="pib-percapita.html" >👤 PIB per Cápita</a><a href="crecimiento.html" >📈 Crecimiento PIB</a><a href="brasil.html" >🇧🇷 Brasil</a><a href="mexico.html" >🇲🇽 México</a><a href="argentina.html" >🇦🇷 Argentina</a><a href="colombia.html" >🇨🇴 Colombia</a><a href="chile.html" >🇨🇱 Chile</a><a href="peru.html" >🇵🇪 Perú</a><a href="venezuela.html" >🇻🇪 Venezuela</a><a href="ecuador.html" >🇪🇨 Ecuador</a><a href="bolivia.html" >🇧🇴 Bolivia</a><a href="uruguay.html" >🇺🇾 Uruguay</a><a href="paraguay.html" >🇵🇾 Paraguay</a><a href="grandes-economias.html" >🏆 Grandes Economías</a><a href="medianas-economias.html" >📊 Medianas Economías</a><a href="pequenas-economias.html" >🔹 Pequeñas Economías</a><a href="covid-impact.html" >🦠 Impacto COVID-19</a><a href="commodities.html" >🛢 Boom Commodities</a><a href="venezuela-crisis.html" >⚠️ Crisis Venezuela</a><a href="tendencias.html" >📊 Tendencias</a><a href="comparativas.html" >⚖️ Comparativas</a><a href="methodology.html" class="active">📋 Metodología</a><a href="data.html" >📊 Datos</a><a href="sitemap.html" >🗺 Sitemap</a></nav>
+<div class="container">
+<h1>📋 Metodología del Dataset</h1>
+<p class="subtitle">Fuentes, Variables y Proceso de Construcción</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+<span class="badge">🏦 Harvard Dataverse</span><span class="badge">DOI: 10.7910/DVN/KAAUOR</span><span class="badge">CC0 1.0</span>
+</div>
+<div class="abstract"><strong>Descripción:</strong> Este dataset reúne tres series temporales sobre el PIB de 11 países de América Latina para el período 2000-2024. Los datos provienen de fuentes institucionales internacionales de referencia, principalmente el Banco Mundial y el FMI, complementados con estadísticas de CEPAL y bancos centrales nacionales. La compilación fue asistida por Perplexity AI (febrero 2026) para la búsqueda y síntesis de series históricas.</div>
+
+<h2>Cobertura</h2>
+<p>11 países: Brasil, México, Argentina, Colombia, Chile, Perú, Venezuela, Ecuador, Bolivia, Uruguay y Paraguay. Años disponibles: 2000, 2005, 2010, 2015, 2020, 2023, 2024 (PIB nominal y per cápita); 2000, 2005, 2010, 2015, 2020, 2021, 2022, 2023, 2024 (crecimiento anual). Los datos de 2023-2024 son estimaciones preliminares sujetas a revisión.</p>
+
+<h2>Variables y Fuentes</h2>
+<table><thead><tr><th>Variable</th><th>Descripción</th><th>Fuente</th><th>Unidad</th></tr></thead>
+<tbody>
+<tr><td><strong>PIB Nominal</strong></td><td>Producto Interior Bruto en dólares corrientes</td><td>Banco Mundial (WDI) / CEPAL</td><td>Miles de millones USD</td></tr>
+<tr><td><strong>PIB per Cápita</strong></td><td>PIB dividido por la población total</td><td>Banco Mundial (WDI) / FMI (WEO)</td><td>USD corrientes</td></tr>
+<tr><td><strong>Crecimiento Anual</strong></td><td>Variación porcentual anual del PIB real</td><td>Banco Mundial (WDI) / CEPAL</td><td>% del PIB real</td></tr>
+</tbody></table>
+
+<h2>Archivos del Dataset</h2>
+<table><thead><tr><th>Archivo</th><th>Variables</th><th>Observaciones</th><th>Descripción</th></tr></thead>
+<tbody>
+<tr><td>PIB_Latinoamerica_2000_2024.tab</td><td>12</td><td>7</td><td>PIB nominal (B USD) por año clave</td></tr>
+<tr><td>PIB_PerCapita_Latinoamerica_2000_2024.tab</td><td>15</td><td>11</td><td>PIB per cápita USD por año</td></tr>
+<tr><td>PIB_Crecimiento_Anual_Latinoamerica.tab</td><td>13</td><td>11</td><td>Tasas de crecimiento % del PIB real</td></tr>
+</tbody></table>
+
+<h2>Limitaciones</h2>
+<p>Los datos corresponden a años seleccionados (no series anuales completas para todos los indicadores). Los valores de 2023-2024 son estimaciones preliminares. Las cifras de Venezuela en 2018-2024 son especialmente inciertas debido a la limitada disponibilidad de estadísticas oficiales. El PIB nominal no está ajustado por inflación; para comparaciones reales se debe utilizar la variable de crecimiento del PIB real.</p>
+
+<h2>Cita y Licencia</h2>
+<p>El dataset está publicado bajo CC0 1.0 (dominio público). No se requiere permiso para su uso en investigación o aplicaciones comerciales. Se solicita cortesía académica: citar el dataset según el formato indicado en cada página.</p>
+
+<div class="citation"><h3>Cómo citar</h3><p><strong>APA:</strong> de la Serna, J. M. (2026). Evolución del PIB en Latinoamérica por País (2000-2024). Harvard Dataverse. https://doi.org/10.7910/DVN/KAAUOR</p><pre>@dataset{delaserna2026gdp,
+  author={de la Serna, Juan Moises},
+  title={Evolución del PIB en Latinoamérica por País (2000-2024)},
+  year={2026},
+  publisher={Harvard Dataverse},
+  doi={10.7910/DVN/KAAUOR},
+  url={https://doi.org/10.7910/DVN/KAAUOR}
+}</pre></div>
+<footer><p>DOI: <a href="https://doi.org/10.7910/DVN/KAAUOR" target="_blank">10.7910/DVN/KAAUOR</a> &nbsp;|&nbsp; Autor: de la Serna, J. M. (UNIR) &nbsp;|&nbsp; Fuente: Banco Mundial / CEPAL &nbsp;|&nbsp; Licencia: CC0 1.0</p></footer>
+</div>
+</body></html>
