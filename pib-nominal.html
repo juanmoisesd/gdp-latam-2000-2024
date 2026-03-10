@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:'Segoe UI',Arial,sans-serif;line-height:1.7}
+a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}
+nav{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+nav .logo{font-weight:700;font-size:1.05em;color:#f0f6fc;margin-right:10px;white-space:nowrap}
+nav a{color:#8b949e;font-size:.8em;padding:4px 8px;border-radius:4px;white-space:nowrap}
+nav a:hover,nav a.active{background:#21262d;color:#58a6ff;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px}
+h1{font-size:1.9em;color:#f0f6fc;margin-bottom:8px}
+h2{font-size:1.35em;color:#e6edf3;margin:28px 0 12px;border-bottom:1px solid #30363d;padding-bottom:6px}
+h3{font-size:1.1em;color:#cdd9e5;margin:18px 0 8px}
+.subtitle{color:#8b949e;font-size:1.05em;margin-bottom:20px}
+.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:3px 12px;font-size:.8em;color:#8b949e;margin:0 4px 4px 0}
+.abstract{background:#161b22;border-left:4px solid #3fb950;border-radius:0 8px 8px 0;padding:18px 20px;margin:20px 0;font-size:.97em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;text-align:center}
+.kpi .val{font-size:2em;font-weight:700;color:#3fb950}
+.kpi .lbl{font-size:.82em;color:#8b949e;margin-top:4px}
+.chart-wrap{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:16px 0}
+.citation{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:18px;margin:20px 0;font-size:.85em}
+.citation pre{background:#0d1117;border-radius:6px;padding:12px;overflow-x:auto;white-space:pre-wrap;font-size:.9em;color:#7ee787}
+table{width:100%;border-collapse:collapse;font-size:.88em;margin:10px 0}
+th{background:#21262d;color:#cdd9e5;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d}
+td{padding:8px 8px;border-bottom:1px solid #21262d;color:#8b949e}
+tr:hover td{background:#161b22;color:#c9d1d9}
+footer{background:#161b22;border-top:1px solid #30363d;padding:20px;text-align:center;color:#484f58;font-size:.85em;margin-top:40px}
+</style>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<title>💰 PIB Nominal 2000-2024 — PIB América Latina 2000-2024</title>
+<meta name="description" content="PIB nominal en miles de millones USD corrientes para 11 países de América Latina 2000-2024. Fuente: Banco Mundial / CEPAL.">
+</head>
+<body>
+<nav><span class="logo">📈 PIB Latinoamérica 2000-2024</span><a href="index.html" >🏠 Inicio</a><a href="pib-nominal.html" class="active">💰 PIB Nominal</a><a href="pib-percapita.html" >👤 PIB per Cápita</a><a href="crecimiento.html" >📈 Crecimiento PIB</a><a href="brasil.html" >🇧🇷 Brasil</a><a href="mexico.html" >🇲🇽 México</a><a href="argentina.html" >🇦🇷 Argentina</a><a href="colombia.html" >🇨🇴 Colombia</a><a href="chile.html" >🇨🇱 Chile</a><a href="peru.html" >🇵🇪 Perú</a><a href="venezuela.html" >🇻🇪 Venezuela</a><a href="ecuador.html" >🇪🇨 Ecuador</a><a href="bolivia.html" >🇧🇴 Bolivia</a><a href="uruguay.html" >🇺🇾 Uruguay</a><a href="paraguay.html" >🇵🇾 Paraguay</a><a href="grandes-economias.html" >🏆 Grandes Economías</a><a href="medianas-economias.html" >📊 Medianas Economías</a><a href="pequenas-economias.html" >🔹 Pequeñas Economías</a><a href="covid-impact.html" >🦠 Impacto COVID-19</a><a href="commodities.html" >🛢 Boom Commodities</a><a href="venezuela-crisis.html" >⚠️ Crisis Venezuela</a><a href="tendencias.html" >📊 Tendencias</a><a href="comparativas.html" >⚖️ Comparativas</a><a href="methodology.html" >📋 Metodología</a><a href="data.html" >📊 Datos</a><a href="sitemap.html" >🗺 Sitemap</a></nav>
+<div class="container">
+<h1>💰 PIB Nominal 2000-2024</h1>
+<p class="subtitle">PIB nominal en miles de millones USD corrientes para 11 países de América Latina 2000-2024. Fuente: Banco Mundial / CEPAL.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+<span class="badge">🏦 Harvard Dataverse</span><span class="badge">DOI: 10.7910/DVN/KAAUOR</span>
+<span class="badge">11 países</span><span class="badge">2000-2024</span><span class="badge">CC0 1.0</span>
+</div>
+<div class="abstract"><strong>Resumen:</strong> El PIB nominal de América Latina ha experimentado un crecimiento extraordinario en el período 2000-2024, impulsado principalmente por el boom de los commodities (2003-2013), la urbanización y la expansión de las clases medias. Brasil y México concentran más del 55% del PIB regional. Venezuela es el único país que muestra una contracción neta en el período, con un PIB de $102B en 2024 frente a $117B en 2000, producto de la crisis política y económica iniciada en 2013. El conjunto de la región pasó de $2.06T en 2000 a $6.62T en 2024.</div>
+<div class="kpis"><div class="kpi"><div class="val">$6.6T</div><div class="lbl">💰 PIB total 11 países<br>2024</div></div>
+   <div class="kpi"><div class="val">$2.19T</div><div class="lbl">🇧🇷 Brasil 2024<br>(mayor PIB)</div></div>
+   <div class="kpi"><div class="val">+221%</div><div class="lbl">📈 Crecimiento Brasil<br>2000→2024</div></div>
+   <div class="kpi"><div class="val">-13%</div><div class="lbl">⚠️ Venezuela 2024<br>vs 2000</div></div></div>
+<h2>Evolución por País</h2><div class="chart-wrap"><div id="p1" style="height:440px"></div></div><h2>Ranking 2024</h2><div class="chart-wrap"><div id="p2" style="height:440px"></div></div><h2>Mapa de Calor</h2><div class="chart-wrap"><div id="p3" style="height:440px"></div></div><h2>Distribución</h2><div class="chart-wrap"><div id="p4" style="height:440px"></div></div>
+<h2>Hallazgos</h2><p>Brasil lidera el PIB regional con $2.19T en 2024, seguido de México ($1.41T) y Argentina ($621B). La contracción más severa la vivió Venezuela, cuyo PIB cayó de $394B (2010) a $47B (2020), una pérdida del 88% en una década. Chile y Uruguay son los países con mayor PIB per cápita. El auge de commodities 2003-2013 elevó el PIB nominal de toda la región de forma casi uniforme, mientras que el ciclo bajista post-2014 afectó especialmente a Brasil, Argentina y Venezuela.</p>
+<h2>Tabla de Datos</h2>
+<div style="overflow-x:auto"><table><thead><tr><th>País</th><th>2000</th><th>2005</th><th>2010</th><th>2015</th><th>2020</th><th>2023</th><th>2024</th></tr></thead>
+<tbody><tr><td><strong>Brasil</strong></td><td>$644B</td><td>$882B</td><td>$2209B</td><td>$1800B</td><td>$1445B</td><td>$2130B</td><td>$2186B</td></tr><tr><td><strong>México</strong></td><td>$707B</td><td>$849B</td><td>$1057B</td><td>$1172B</td><td>$1076B</td><td>$1322B</td><td>$1411B</td></tr><tr><td><strong>Argentina</strong></td><td>$284B</td><td>$199B</td><td>$423B</td><td>$643B</td><td>$383B</td><td>$641B</td><td>$621B</td></tr><tr><td><strong>Colombia</strong></td><td>$99B</td><td>$146B</td><td>$287B</td><td>$293B</td><td>$271B</td><td>$363B</td><td>$373B</td></tr><tr><td><strong>Chile</strong></td><td>$79B</td><td>$119B</td><td>$218B</td><td>$243B</td><td>$253B</td><td>$335B</td><td>$344B</td></tr><tr><td><strong>Perú</strong></td><td>$53B</td><td>$76B</td><td>$148B</td><td>$190B</td><td>$203B</td><td>$267B</td><td>$289B</td></tr><tr><td><strong>Venezuela</strong></td><td>$117B</td><td>$145B</td><td>$394B</td><td>$331B</td><td>$47B</td><td>$97B</td><td>$102B</td></tr><tr><td><strong>Ecuador</strong></td><td>$37B</td><td>$41B</td><td>$70B</td><td>$100B</td><td>$99B</td><td>$118B</td><td>$124B</td></tr><tr><td><strong>Bolivia</strong></td><td>$8B</td><td>$10B</td><td>$20B</td><td>$33B</td><td>$37B</td><td>$45B</td><td>$48B</td></tr><tr><td><strong>Uruguay</strong></td><td>$20B</td><td>$17B</td><td>$40B</td><td>$54B</td><td>$53B</td><td>$71B</td><td>$77B</td></tr><tr><td><strong>Paraguay</strong></td><td>$10B</td><td>$10B</td><td>$20B</td><td>$30B</td><td>$35B</td><td>$43B</td><td>$47B</td></tr></tbody></table></div>
+<div class="citation"><h3>Cómo citar</h3><p><strong>APA:</strong> de la Serna, J. M. (2026). Evolución del PIB en Latinoamérica por País (2000-2024). Harvard Dataverse. https://doi.org/10.7910/DVN/KAAUOR</p><pre>@dataset{delaserna2026gdp,
+  author={de la Serna, Juan Moises},
+  title={Evolución del PIB en Latinoamérica por País (2000-2024)},
+  year={2026},
+  publisher={Harvard Dataverse},
+  doi={10.7910/DVN/KAAUOR},
+  url={https://doi.org/10.7910/DVN/KAAUOR}
+}</pre></div>
+<footer><p>DOI: <a href="https://doi.org/10.7910/DVN/KAAUOR" target="_blank">10.7910/DVN/KAAUOR</a> &nbsp;|&nbsp; Autor: de la Serna, J. M. (UNIR) &nbsp;|&nbsp; Fuente: Banco Mundial / CEPAL &nbsp;|&nbsp; Licencia: CC0 1.0</p></footer>
+</div>
+<script>
+const CS=["Brasil","México","Argentina","Colombia","Chile","Perú","Venezuela","Ecuador","Bolivia","Uruguay","Paraguay"];const PIB={"Brasil":[644,882,2209,1800,1445,2130,2186],"México":[707,849,1057,1172,1076,1322,1411],"Argentina":[284,199,423,643,383,641,621],"Colombia":[99,146,287,293,271,363,373],"Chile":[79,119,218,243,253,335,344],"Perú":[53,76,148,190,203,267,289],"Venezuela":[117,145,394,331,47,97,102],"Ecuador":[37,41,70,100,99,118,124],"Bolivia":[8,10,20,33,37,45,48],"Uruguay":[20,17,40,54,53,71,77],"Paraguay":[10,10,20,30,35,43,47]};const PERCAP={"Brasil":[3757,4736,11288,8812,6796,10079,10216],"México":[7115,7910,9276,9545,8346,10046,10634],"Argentina":[7673,5099,10498,14537,8433,13694,12645],"Colombia":[2343,3336,6249,5888,5341,7001,7106],"Chile":[5105,7409,12808,13416,13231,16791,17020],"Perú":[2043,2804,5219,6207,6148,7822,8317],"Venezuela":[4589,5388,13644,10089,1618,3281,3426],"Ecuador":[2718,3007,4643,6134,5635,6531,6758],"Bolivia":[998,1055,1970,3096,3195,3741,3954],"Uruguay":[6095,5036,11974,15474,15438,20555,22150],"Paraguay":[1659,1676,3181,4506,5018,5952,6413]};const CREC={"Brasil":[4.3,3.2,7.5,-3.8,-4.1,4.6,2.9,2.9,3.1],"México":[6.6,3.3,5.1,3.3,-8.6,4.8,3.9,3.2,1.5],"Argentina":[-0.8,9.2,10.1,2.7,-9.9,10.4,5,-1.6,-3.5],"Colombia":[2.9,4.7,4,3,-6.8,10.7,7.3,0.6,1.7],"Chile":[4.5,5.6,5.8,2.4,-6.1,11.7,2.4,-0.2,2.4],"Perú":[2.7,6.3,8.5,3.3,-11,13.3,2.7,-0.6,3.1],"Venezuela":[3.7,10.3,-1.5,-6.2,-30,0.5,8,4,3],"Ecuador":[2.8,6,3.5,0.1,-7.8,4.2,4,2.5,1.7],"Bolivia":[2.5,4.4,4.1,4.9,-8.8,6.1,3.8,2.7,2.2],"Uruguay":[-1.4,6.8,7.8,0.4,-6.9,5.3,4.9,0.4,3.2],"Paraguay":[-3.3,2.9,13.1,3,-0.8,4,0.2,-1.4,3.8]};const YEARS=[2000,2005,2010,2015,2020,2023,2024];const CREC_YEARS=[2000,2005,2010,2015,2020,2021,2022,2023,2024];const COLS=["#3fb950","#58a6ff","#f85149","#e3b341","#d2a8ff","#ffa657","#ff7b72","#79c0ff","#a5d6ff","#7ee787","#ffb347"];
+
+// P1: multi-line
+Plotly.newPlot('p1',CS.map((c,i)=>({type:'scatter',mode:'lines+markers',name:c,x:YEARS,y:PIB[c],line:{color:COLS[i],width:2.5},marker:{size:8},hovertemplate:'<b>'+c+'</b><br>%{x}: $%{y}B<extra></extra>'})),{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{title:'Año',color:'#8b949e',gridcolor:'#30363d',tickvals:YEARS},yaxis:{title:'Miles de millones USD',color:'#8b949e',gridcolor:'#30363d'},legend:{bgcolor:'#0d1117',bordercolor:'#30363d'},margin:{l:80,r:20,t:20,b:60}});
+// P2: bar 2024 ranking
+const p2d=CS.map(c=>({c,v:PIB[c][6]})).sort((a,b)=>b.v-a.v);
+Plotly.newPlot('p2',[{type:'bar',orientation:'h',x:p2d.map(d=>d.v).reverse(),y:p2d.map(d=>d.c).reverse(),marker:{color:p2d.map(d=>d.v>1000?'#3fb950':d.v>200?'#58a6ff':'#e3b341').reverse()},text:p2d.map(d=>'$'+d.v+'B').reverse(),textposition:'outside',hovertemplate:'<b>%{y}</b>: $%{x}B<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{title:'Miles de millones USD',color:'#8b949e',gridcolor:'#30363d'},yaxis:{color:'#8b949e'},margin:{l:120,r:100,t:20,b:60}});
+// P3: heatmap
+Plotly.newPlot('p3',[{type:'heatmap',z:CS.map(c=>PIB[c]),x:YEARS,y:CS,colorscale:'YlOrRd',hovertemplate:'<b>%{y}</b> %{x}<br>PIB: $%{z}B<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:11},xaxis:{color:'#8b949e',tickvals:YEARS},yaxis:{color:'#8b949e'},margin:{l:120,r:60,t:20,b:60}});
+// P4: stacked bar 2000 vs 2024
+Plotly.newPlot('p4',[{type:'bar',name:'2000',x:CS,y:CS.map(c=>PIB[c][0]),marker:{color:'#58a6ff88'}},{type:'bar',name:'2024',x:CS,y:CS.map(c=>PIB[c][6]),marker:{color:'#3fb950'}}],{barmode:'group',paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:11},xaxis:{color:'#8b949e',tickangle:-30},yaxis:{title:'Miles de millones USD',color:'#8b949e',gridcolor:'#30363d'},legend:{bgcolor:'#0d1117'},margin:{l:60,r:20,t:20,b:80}});
+
+</script>
+</body></html>
