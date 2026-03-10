@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:'Segoe UI',Arial,sans-serif;line-height:1.7}
+a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}
+nav{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+nav .logo{font-weight:700;font-size:1.05em;color:#f0f6fc;margin-right:10px;white-space:nowrap}
+nav a{color:#8b949e;font-size:.8em;padding:4px 8px;border-radius:4px;white-space:nowrap}
+nav a:hover,nav a.active{background:#21262d;color:#58a6ff;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px}
+h1{font-size:1.9em;color:#f0f6fc;margin-bottom:8px}
+h2{font-size:1.35em;color:#e6edf3;margin:28px 0 12px;border-bottom:1px solid #30363d;padding-bottom:6px}
+h3{font-size:1.1em;color:#cdd9e5;margin:18px 0 8px}
+.subtitle{color:#8b949e;font-size:1.05em;margin-bottom:20px}
+.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:3px 12px;font-size:.8em;color:#8b949e;margin:0 4px 4px 0}
+.abstract{background:#161b22;border-left:4px solid #3fb950;border-radius:0 8px 8px 0;padding:18px 20px;margin:20px 0;font-size:.97em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;text-align:center}
+.kpi .val{font-size:2em;font-weight:700;color:#3fb950}
+.kpi .lbl{font-size:.82em;color:#8b949e;margin-top:4px}
+.chart-wrap{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:16px 0}
+.citation{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:18px;margin:20px 0;font-size:.85em}
+.citation pre{background:#0d1117;border-radius:6px;padding:12px;overflow-x:auto;white-space:pre-wrap;font-size:.9em;color:#7ee787}
+table{width:100%;border-collapse:collapse;font-size:.88em;margin:10px 0}
+th{background:#21262d;color:#cdd9e5;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d}
+td{padding:8px 8px;border-bottom:1px solid #21262d;color:#8b949e}
+tr:hover td{background:#161b22;color:#c9d1d9}
+footer{background:#161b22;border-top:1px solid #30363d;padding:20px;text-align:center;color:#484f58;font-size:.85em;margin-top:40px}
+</style><script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<title>👤 PIB per Cápita América Latina 2000-2024</title>
+<meta name="description" content="PIB per cápita en USD corrientes para 11 países de América Latina 2000-2024. Fuente: Banco Mundial / FMI.">
+</head><body>
+<nav><span class="logo">📈 PIB Latinoamérica 2000-2024</span><a href="index.html" >🏠 Inicio</a><a href="pib-nominal.html" >💰 PIB Nominal</a><a href="pib-percapita.html" class="active">👤 PIB per Cápita</a><a href="crecimiento.html" >📈 Crecimiento PIB</a><a href="brasil.html" >🇧🇷 Brasil</a><a href="mexico.html" >🇲🇽 México</a><a href="argentina.html" >🇦🇷 Argentina</a><a href="colombia.html" >🇨🇴 Colombia</a><a href="chile.html" >🇨🇱 Chile</a><a href="peru.html" >🇵🇪 Perú</a><a href="venezuela.html" >🇻🇪 Venezuela</a><a href="ecuador.html" >🇪🇨 Ecuador</a><a href="bolivia.html" >🇧🇴 Bolivia</a><a href="uruguay.html" >🇺🇾 Uruguay</a><a href="paraguay.html" >🇵🇾 Paraguay</a><a href="grandes-economias.html" >🏆 Grandes Economías</a><a href="medianas-economias.html" >📊 Medianas Economías</a><a href="pequenas-economias.html" >🔹 Pequeñas Economías</a><a href="covid-impact.html" >🦠 Impacto COVID-19</a><a href="commodities.html" >🛢 Boom Commodities</a><a href="venezuela-crisis.html" >⚠️ Crisis Venezuela</a><a href="tendencias.html" >📊 Tendencias</a><a href="comparativas.html" >⚖️ Comparativas</a><a href="methodology.html" >📋 Metodología</a><a href="data.html" >📊 Datos</a><a href="sitemap.html" >🗺 Sitemap</a></nav>
+<div class="container">
+<h1>👤 PIB per Cápita en América Latina 2000-2024</h1>
+<p class="subtitle">USD corrientes por habitante — Banco Mundial / FMI</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+<span class="badge">🏦 Harvard Dataverse</span><span class="badge">DOI: 10.7910/DVN/KAAUOR</span>
+<span class="badge">11 países</span><span class="badge">2000-2024</span>
+</div>
+<div class="abstract"><strong>Resumen:</strong> El PIB per cápita es uno de los indicadores más relevantes para comparar el nivel de bienestar material entre países. En América Latina, Uruguay lidera en 2024 con $22,150 USD, seguido de Chile ($17,020) y Argentina ($12,645). Venezuela muestra el deterioro más dramático: pasó de $13,644 en 2010 a $3,426 en 2024, un retroceso de 25 años. La pandemia de COVID-19 generó caídas de entre 6% y 30% en el PIB per cápita en 2020, con recuperaciones heterogéneas en 2021-2022.</div>
+<div class="kpis">
+<div class="kpi"><div class="val">$22,150</div><div class="lbl">🥇 Uruguay 2024<br>(mayor per cápita)</div></div>
+<div class="kpi"><div class="val">$3,426</div><div class="lbl">⚠️ Venezuela 2024<br>(menor de la región)</div></div>
+<div class="kpi"><div class="val">+364%</div><div class="lbl">📈 Uruguay creció<br>2000→2024</div></div>
+<div class="kpi"><div class="val">-75%</div><div class="lbl">📉 Venezuela cayó<br>desde su pico 2010</div></div>
+</div>
+<h2>PIB per Cápita por País 2000-2024 (USD corrientes)</h2>
+<div class="chart-wrap"><div id="pc1" style="height:440px"></div></div>
+<h2>Ranking PIB per Cápita 2024</h2>
+<div class="chart-wrap"><div id="pc2" style="height:400px"></div></div>
+<h2>Mapa de Calor: PIB per Cápita por País y Año</h2>
+<div class="chart-wrap"><div id="pc3" style="height:420px"></div></div>
+<h2>Variación PIB per Cápita 2000 vs 2024</h2>
+<div class="chart-wrap"><div id="pc4" style="height:380px"></div></div>
+<h2>Hallazgos</h2>
+<p>Uruguay y Chile son las economías de mayor bienestar por habitante en la región, con niveles de PIB per cápita superiores a los $17,000 en 2024. Argentina, a pesar de su potencial, muestra alta volatilidad: su per cápita pasó de $14,537 en 2015 a $8,433 en 2020, para recuperarse a $12,645 en 2024. La brecha entre Uruguay ($22,150) y Bolivia ($3,954) refleja las enormes desigualdades estructurales de la región. Venezuela es el caso más dramático: su PIB per cápita cayó de un máximo de $13,644 en 2010 a apenas $3,281 en 2023, revirtiendo dos décadas de progreso.</p>
+<div style="overflow-x:auto"><table><thead><tr><th>País</th><th>2000</th><th>2005</th><th>2010</th><th>2015</th><th>2020</th><th>2023</th><th>2024</th></tr></thead><tbody><tr><td><strong>Brasil</strong></td><td>$3757</td><td>$4736</td><td>$11.288</td><td>$8812</td><td>$6796</td><td>$10.079</td><td>$10.216</td></tr><tr><td><strong>México</strong></td><td>$7115</td><td>$7910</td><td>$9276</td><td>$9545</td><td>$8346</td><td>$10.046</td><td>$10.634</td></tr><tr><td><strong>Argentina</strong></td><td>$7673</td><td>$5099</td><td>$10.498</td><td>$14.537</td><td>$8433</td><td>$13.694</td><td>$12.645</td></tr><tr><td><strong>Colombia</strong></td><td>$2343</td><td>$3336</td><td>$6249</td><td>$5888</td><td>$5341</td><td>$7001</td><td>$7106</td></tr><tr><td><strong>Chile</strong></td><td>$5105</td><td>$7409</td><td>$12.808</td><td>$13.416</td><td>$13.231</td><td>$16.791</td><td>$17.020</td></tr><tr><td><strong>Perú</strong></td><td>$2043</td><td>$2804</td><td>$5219</td><td>$6207</td><td>$6148</td><td>$7822</td><td>$8317</td></tr><tr><td><strong>Venezuela</strong></td><td>$4589</td><td>$5388</td><td>$13.644</td><td>$10.089</td><td>$1618</td><td>$3281</td><td>$3426</td></tr><tr><td><strong>Ecuador</strong></td><td>$2718</td><td>$3007</td><td>$4643</td><td>$6134</td><td>$5635</td><td>$6531</td><td>$6758</td></tr><tr><td><strong>Bolivia</strong></td><td>$998</td><td>$1055</td><td>$1970</td><td>$3096</td><td>$3195</td><td>$3741</td><td>$3954</td></tr><tr><td><strong>Uruguay</strong></td><td>$6095</td><td>$5036</td><td>$11.974</td><td>$15.474</td><td>$15.438</td><td>$20.555</td><td>$22.150</td></tr><tr><td><strong>Paraguay</strong></td><td>$1659</td><td>$1676</td><td>$3181</td><td>$4506</td><td>$5018</td><td>$5952</td><td>$6413</td></tr></tbody></table></div>
+<div class="citation"><h3>Cómo citar</h3><p><strong>APA:</strong> de la Serna, J. M. (2026). Evolución del PIB en Latinoamérica por País (2000-2024). Harvard Dataverse. https://doi.org/10.7910/DVN/KAAUOR</p><pre>@dataset{delaserna2026gdp,
+  author={de la Serna, Juan Moises},
+  title={Evolución del PIB en Latinoamérica por País (2000-2024)},
+  year={2026},
+  publisher={Harvard Dataverse},
+  doi={10.7910/DVN/KAAUOR},
+  url={https://doi.org/10.7910/DVN/KAAUOR}
+}</pre></div>
+<footer><p>DOI: <a href="https://doi.org/10.7910/DVN/KAAUOR" target="_blank">10.7910/DVN/KAAUOR</a> &nbsp;|&nbsp; Autor: de la Serna, J. M. (UNIR) &nbsp;|&nbsp; Fuente: Banco Mundial / CEPAL &nbsp;|&nbsp; Licencia: CC0 1.0</p></footer>
+</div>
+<script>
+const CS=["Brasil","México","Argentina","Colombia","Chile","Perú","Venezuela","Ecuador","Bolivia","Uruguay","Paraguay"];const PERCAP={"Brasil":[3757,4736,11288,8812,6796,10079,10216],"México":[7115,7910,9276,9545,8346,10046,10634],"Argentina":[7673,5099,10498,14537,8433,13694,12645],"Colombia":[2343,3336,6249,5888,5341,7001,7106],"Chile":[5105,7409,12808,13416,13231,16791,17020],"Perú":[2043,2804,5219,6207,6148,7822,8317],"Venezuela":[4589,5388,13644,10089,1618,3281,3426],"Ecuador":[2718,3007,4643,6134,5635,6531,6758],"Bolivia":[998,1055,1970,3096,3195,3741,3954],"Uruguay":[6095,5036,11974,15474,15438,20555,22150],"Paraguay":[1659,1676,3181,4506,5018,5952,6413]};const YEARS=[2000,2005,2010,2015,2020,2023,2024];const COLS=["#3fb950","#58a6ff","#f85149","#e3b341","#d2a8ff","#ffa657","#ff7b72","#79c0ff","#a5d6ff","#7ee787","#ffb347"];
+Plotly.newPlot('pc1',CS.map((c,i)=>({type:'scatter',mode:'lines+markers',name:c,x:YEARS,y:PERCAP[c],line:{color:COLS[i],width:2.5},marker:{size:8},hovertemplate:'<b>'+c+'</b><br>%{x}: $%{y} USD<extra></extra>'})),{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{title:'Año',color:'#8b949e',gridcolor:'#30363d',tickvals:YEARS},yaxis:{title:'USD por habitante',color:'#8b949e',gridcolor:'#30363d'},legend:{bgcolor:'#0d1117',bordercolor:'#30363d'},margin:{l:80,r:20,t:20,b:60}});
+const pc2d=CS.map(c=>({c,v:PERCAP[c][6]})).sort((a,b)=>b.v-a.v);
+Plotly.newPlot('pc2',[{type:'bar',orientation:'h',x:pc2d.map(d=>d.v).reverse(),y:pc2d.map(d=>d.c).reverse(),marker:{color:pc2d.map(d=>d.v>15000?'#3fb950':d.v>8000?'#58a6ff':d.v>4000?'#e3b341':'#f85149').reverse()},text:pc2d.map(d=>'$'+d.v.toLocaleString()).reverse(),textposition:'outside',hovertemplate:'<b>%{y}</b>: $%{x}<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{title:'USD per cápita',color:'#8b949e',gridcolor:'#30363d'},yaxis:{color:'#8b949e'},margin:{l:120,r:120,t:20,b:60}});
+Plotly.newPlot('pc3',[{type:'heatmap',z:CS.map(c=>PERCAP[c]),x:YEARS,y:CS,colorscale:'RdYlGn',hovertemplate:'<b>%{y}</b> %{x}<br>$%{z} USD<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:11},xaxis:{color:'#8b949e',tickvals:YEARS},yaxis:{color:'#8b949e'},margin:{l:120,r:60,t:20,b:60}});
+const pcd=CS.map(c=>({c,v0:PERCAP[c][0],v1:PERCAP[c][6],pct:Math.round((PERCAP[c][6]-PERCAP[c][0])/PERCAP[c][0]*100)})).sort((a,b)=>b.pct-a.pct);
+Plotly.newPlot('pc4',[{type:'bar',x:pcd.map(d=>d.c),y:pcd.map(d=>d.pct),marker:{color:pcd.map(d=>d.pct>=0?'#3fb950':'#f85149')},text:pcd.map(d=>d.pct+'%'),textposition:'outside',hovertemplate:'<b>%{x}</b><br>Variación: %{y}%<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:11},xaxis:{color:'#8b949e',tickangle:-30},yaxis:{title:'% cambio 2000→2024',color:'#8b949e',gridcolor:'#30363d',zeroline:true,zerolinecolor:'#8b949e'},margin:{l:60,r:20,t:20,b:80}});
+</script>
+</body></html>
