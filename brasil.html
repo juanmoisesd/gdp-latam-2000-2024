@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:'Segoe UI',Arial,sans-serif;line-height:1.7}
+a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}
+nav{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+nav .logo{font-weight:700;font-size:1.05em;color:#f0f6fc;margin-right:10px;white-space:nowrap}
+nav a{color:#8b949e;font-size:.8em;padding:4px 8px;border-radius:4px;white-space:nowrap}
+nav a:hover,nav a.active{background:#21262d;color:#58a6ff;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px}
+h1{font-size:1.9em;color:#f0f6fc;margin-bottom:8px}
+h2{font-size:1.35em;color:#e6edf3;margin:28px 0 12px;border-bottom:1px solid #30363d;padding-bottom:6px}
+h3{font-size:1.1em;color:#cdd9e5;margin:18px 0 8px}
+.subtitle{color:#8b949e;font-size:1.05em;margin-bottom:20px}
+.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:3px 12px;font-size:.8em;color:#8b949e;margin:0 4px 4px 0}
+.abstract{background:#161b22;border-left:4px solid #3fb950;border-radius:0 8px 8px 0;padding:18px 20px;margin:20px 0;font-size:.97em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;text-align:center}
+.kpi .val{font-size:2em;font-weight:700;color:#3fb950}
+.kpi .lbl{font-size:.82em;color:#8b949e;margin-top:4px}
+.chart-wrap{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:16px 0}
+.citation{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:18px;margin:20px 0;font-size:.85em}
+.citation pre{background:#0d1117;border-radius:6px;padding:12px;overflow-x:auto;white-space:pre-wrap;font-size:.9em;color:#7ee787}
+table{width:100%;border-collapse:collapse;font-size:.88em;margin:10px 0}
+th{background:#21262d;color:#cdd9e5;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d}
+td{padding:8px 8px;border-bottom:1px solid #21262d;color:#8b949e}
+tr:hover td{background:#161b22;color:#c9d1d9}
+footer{background:#161b22;border-top:1px solid #30363d;padding:20px;text-align:center;color:#484f58;font-size:.85em;margin-top:40px}
+</style><script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<title>🇧🇷 Brasil — PIB 2000-2024</title>
+<meta name="description" content="Evolución del PIB de Brasil 2000-2024: PIB nominal $2186B USD, PIB per cápita $10.216 USD, crecimiento 3.1% en 2024. Fuente: Banco Mundial.">
+</head><body>
+<nav><span class="logo">📈 PIB Latinoamérica 2000-2024</span><a href="index.html" >🏠 Inicio</a><a href="pib-nominal.html" >💰 PIB Nominal</a><a href="pib-percapita.html" >👤 PIB per Cápita</a><a href="crecimiento.html" >📈 Crecimiento PIB</a><a href="brasil.html" class="active">🇧🇷 Brasil</a><a href="mexico.html" >🇲🇽 México</a><a href="argentina.html" >🇦🇷 Argentina</a><a href="colombia.html" >🇨🇴 Colombia</a><a href="chile.html" >🇨🇱 Chile</a><a href="peru.html" >🇵🇪 Perú</a><a href="venezuela.html" >🇻🇪 Venezuela</a><a href="ecuador.html" >🇪🇨 Ecuador</a><a href="bolivia.html" >🇧🇴 Bolivia</a><a href="uruguay.html" >🇺🇾 Uruguay</a><a href="paraguay.html" >🇵🇾 Paraguay</a><a href="grandes-economias.html" >🏆 Grandes Economías</a><a href="medianas-economias.html" >📊 Medianas Economías</a><a href="pequenas-economias.html" >🔹 Pequeñas Economías</a><a href="covid-impact.html" >🦠 Impacto COVID-19</a><a href="commodities.html" >🛢 Boom Commodities</a><a href="venezuela-crisis.html" >⚠️ Crisis Venezuela</a><a href="tendencias.html" >📊 Tendencias</a><a href="comparativas.html" >⚖️ Comparativas</a><a href="methodology.html" >📋 Metodología</a><a href="data.html" >📊 Datos</a><a href="sitemap.html" >🗺 Sitemap</a></nav>
+<div class="container">
+<h1>🇧🇷 Brasil: Evolución del PIB 2000-2024</h1>
+<p class="subtitle">PIB nominal, PIB per cápita y crecimiento anual — Banco Mundial / CEPAL</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+<span class="badge">🏦 Harvard Dataverse</span><span class="badge">DOI: 10.7910/DVN/KAAUOR</span><span class="badge">CC0 1.0</span>
+</div>
+<div class="abstract"><strong>Resumen:</strong> Brasil registra en 2024 un PIB nominal de $2186B USD (miles de millones), un PIB per cápita de $10.216 USD y una tasa de crecimiento del PIB real de 3.1%. El país experimentó un cambio del +239% en su PIB nominal entre 2000 y 2024, con un crecimiento promedio anual de 2.3% en el período analizado. Los datos incluyen el impacto de la crisis financiera global de 2008-2009 y la pandemia de COVID-19 en 2020.</div>
+<div class="kpis">
+<div class="kpi"><div class="val">$2186B</div><div class="lbl">💰 PIB Nominal 2024<br>(miles de millones USD)</div></div>
+<div class="kpi"><div class="val">$10.216</div><div class="lbl">👤 PIB per Cápita 2024<br>(USD corrientes)</div></div>
+<div class="kpi"><div class="val">3.1%</div><div class="lbl">📈 Crecimiento PIB<br>real 2024</div></div>
+<div class="kpi"><div class="val">+239%</div><div class="lbl">📊 Variación PIB<br>2000→2024</div></div>
+</div>
+<h2>PIB Nominal 2000-2024 (miles de millones USD)</h2>
+<div class="chart-wrap"><div id="c1" style="height:320px"></div></div>
+<h2>PIB per Cápita 2000-2024 (USD corrientes)</h2>
+<div class="chart-wrap"><div id="c2" style="height:320px"></div></div>
+<h2>Crecimiento Anual PIB Real %</h2>
+<div class="chart-wrap"><div id="c3" style="height:320px"></div></div>
+<h2>Brasil vs Promedio LATAM 2024</h2>
+<div class="chart-wrap"><div id="c4" style="height:320px"></div></div>
+<h2>Tabla de Datos — Brasil</h2>
+<table><thead><tr><th>Año</th><th>PIB Nominal (B USD)</th><th>PIB per Cápita (USD)</th><th>Crec. PIB real %</th></tr></thead>
+<tbody><tr><td>2000</td><td>$644B</td><td>$3757</td><td style="color:#3fb950">4.3%</td></tr><tr><td>2005</td><td>$882B</td><td>$4736</td><td style="color:#3fb950">3.2%</td></tr><tr><td>2010</td><td>$2209B</td><td>$11.288</td><td style="color:#3fb950">7.5%</td></tr><tr><td>2015</td><td>$1800B</td><td>$8812</td><td style="color:#f85149">-3.8%</td></tr><tr><td>2020</td><td>$1445B</td><td>$6796</td><td style="color:#f85149">-4.1%</td></tr><tr><td>2023</td><td>$2130B</td><td>$10.079</td><td style="color:#3fb950">2.9%</td></tr><tr><td>2024</td><td>$2186B</td><td>$10.216</td><td style="color:#3fb950">3.1%</td></tr>
+</tbody></table>
+<div class="citation"><h3>Cómo citar</h3><p><strong>APA:</strong> de la Serna, J. M. (2026). Evolución del PIB en Latinoamérica por País (2000-2024). Harvard Dataverse. https://doi.org/10.7910/DVN/KAAUOR</p><pre>@dataset{delaserna2026gdp,
+  author={de la Serna, Juan Moises},
+  title={Evolución del PIB en Latinoamérica por País (2000-2024)},
+  year={2026},
+  publisher={Harvard Dataverse},
+  doi={10.7910/DVN/KAAUOR},
+  url={https://doi.org/10.7910/DVN/KAAUOR}
+}</pre></div>
+<footer><p>DOI: <a href="https://doi.org/10.7910/DVN/KAAUOR" target="_blank">10.7910/DVN/KAAUOR</a> &nbsp;|&nbsp; Autor: de la Serna, J. M. (UNIR) &nbsp;|&nbsp; Fuente: Banco Mundial / CEPAL &nbsp;|&nbsp; Licencia: CC0 1.0</p></footer>
+</div>
+<script>
+const YEARS=[2000,2005,2010,2015,2020,2023,2024];const CREC_YEARS=[2000,2005,2010,2015,2020,2021,2022,2023,2024];
+const pib=[644,882,2209,1800,1445,2130,2186];const pc=[3757,4736,11288,8812,6796,10079,10216];const crec=[4.3,3.2,7.5,-3.8,-4.1,4.6,2.9,2.9,3.1];
+const colC='#3fb950';const CS=["Brasil","México","Argentina","Colombia","Chile","Perú","Venezuela","Ecuador","Bolivia","Uruguay","Paraguay"];const PIB_ALL={"Brasil":[644,882,2209,1800,1445,2130,2186],"México":[707,849,1057,1172,1076,1322,1411],"Argentina":[284,199,423,643,383,641,621],"Colombia":[99,146,287,293,271,363,373],"Chile":[79,119,218,243,253,335,344],"Perú":[53,76,148,190,203,267,289],"Venezuela":[117,145,394,331,47,97,102],"Ecuador":[37,41,70,100,99,118,124],"Bolivia":[8,10,20,33,37,45,48],"Uruguay":[20,17,40,54,53,71,77],"Paraguay":[10,10,20,30,35,43,47]};const PERCAP_ALL={"Brasil":[3757,4736,11288,8812,6796,10079,10216],"México":[7115,7910,9276,9545,8346,10046,10634],"Argentina":[7673,5099,10498,14537,8433,13694,12645],"Colombia":[2343,3336,6249,5888,5341,7001,7106],"Chile":[5105,7409,12808,13416,13231,16791,17020],"Perú":[2043,2804,5219,6207,6148,7822,8317],"Venezuela":[4589,5388,13644,10089,1618,3281,3426],"Ecuador":[2718,3007,4643,6134,5635,6531,6758],"Bolivia":[998,1055,1970,3096,3195,3741,3954],"Uruguay":[6095,5036,11974,15474,15438,20555,22150],"Paraguay":[1659,1676,3181,4506,5018,5952,6413]};
+Plotly.newPlot('c1',[{type:'scatter',mode:'lines+markers',x:YEARS,y:pib,fill:'tozeroy',fillcolor:colC+'22',line:{color:colC,width:2.5},marker:{size:9},hovertemplate:'%{x}: $%{y}B USD<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{title:'Año',color:'#8b949e',gridcolor:'#30363d',tickvals:YEARS},yaxis:{title:'B USD',color:'#8b949e',gridcolor:'#30363d'},margin:{l:70,r:20,t:20,b:50},height:320});
+Plotly.newPlot('c2',[{type:'scatter',mode:'lines+markers',x:YEARS,y:pc,fill:'tozeroy',fillcolor:'#58a6ff22',line:{color:'#58a6ff',width:2.5},marker:{size:9},hovertemplate:'%{x}: $%{y} USD<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{title:'Año',color:'#8b949e',gridcolor:'#30363d',tickvals:YEARS},yaxis:{title:'USD',color:'#8b949e',gridcolor:'#30363d'},margin:{l:80,r:20,t:20,b:50},height:320});
+Plotly.newPlot('c3',[{type:'bar',x:CREC_YEARS,y:crec,marker:{color:crec.map(v=>v>=0?'#3fb950':'#f85149')},text:crec.map(v=>v+'%'),textposition:'outside',hovertemplate:'%{x}: %{y}%<extra></extra>'}],{paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{title:'Año',color:'#8b949e',gridcolor:'#30363d',tickvals:CREC_YEARS},yaxis:{title:'%',color:'#8b949e',gridcolor:'#30363d',zeroline:true,zerolinecolor:'#484f58'},margin:{l:60,r:20,t:20,b:50},height:320});
+const cmp=[{cat:'PIB 2024 (B USD)',country:pib[6],latam:Math.round(CS.reduce((s,c)=>s+PIB_ALL[c][6],0)/CS.length)},{cat:'PIB per Cápita 2024',country:pc[6],latam:Math.round(CS.reduce((s,c)=>s+PERCAP_ALL[c][6],0)/CS.length)}];
+Plotly.newPlot('c4',[{type:'bar',name:'Brasil',x:cmp.map(d=>d.cat),y:cmp.map(d=>d.country),marker:{color:colC}},{type:'bar',name:'Promedio LATAM',x:cmp.map(d=>d.cat),y:cmp.map(d=>d.latam),marker:{color:'#8b949e'}}],{barmode:'group',paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},xaxis:{color:'#8b949e'},yaxis:{color:'#8b949e',gridcolor:'#30363d'},legend:{bgcolor:'#0d1117'},margin:{l:60,r:20,t:20,b:60},height:320});
+</script>
+</body></html>
