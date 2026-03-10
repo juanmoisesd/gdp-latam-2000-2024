@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:'Segoe UI',Arial,sans-serif;line-height:1.7}
+a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}
+nav{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+nav .logo{font-weight:700;font-size:1.05em;color:#f0f6fc;margin-right:10px;white-space:nowrap}
+nav a{color:#8b949e;font-size:.8em;padding:4px 8px;border-radius:4px;white-space:nowrap}
+nav a:hover,nav a.active{background:#21262d;color:#58a6ff;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px}
+h1{font-size:1.9em;color:#f0f6fc;margin-bottom:8px}
+h2{font-size:1.35em;color:#e6edf3;margin:28px 0 12px;border-bottom:1px solid #30363d;padding-bottom:6px}
+h3{font-size:1.1em;color:#cdd9e5;margin:18px 0 8px}
+.subtitle{color:#8b949e;font-size:1.05em;margin-bottom:20px}
+.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:3px 12px;font-size:.8em;color:#8b949e;margin:0 4px 4px 0}
+.abstract{background:#161b22;border-left:4px solid #3fb950;border-radius:0 8px 8px 0;padding:18px 20px;margin:20px 0;font-size:.97em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;text-align:center}
+.kpi .val{font-size:2em;font-weight:700;color:#3fb950}
+.kpi .lbl{font-size:.82em;color:#8b949e;margin-top:4px}
+.chart-wrap{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:16px 0}
+.citation{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:18px;margin:20px 0;font-size:.85em}
+.citation pre{background:#0d1117;border-radius:6px;padding:12px;overflow-x:auto;white-space:pre-wrap;font-size:.9em;color:#7ee787}
+table{width:100%;border-collapse:collapse;font-size:.88em;margin:10px 0}
+th{background:#21262d;color:#cdd9e5;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d}
+td{padding:8px 8px;border-bottom:1px solid #21262d;color:#8b949e}
+tr:hover td{background:#161b22;color:#c9d1d9}
+footer{background:#161b22;border-top:1px solid #30363d;padding:20px;text-align:center;color:#484f58;font-size:.85em;margin-top:40px}
+</style>
+<title>📊 Datos Completos — PIB América Latina 2000-2024</title>
+</head><body>
+<nav><span class="logo">📈 PIB Latinoamérica 2000-2024</span><a href="index.html" >🏠 Inicio</a><a href="pib-nominal.html" >💰 PIB Nominal</a><a href="pib-percapita.html" >👤 PIB per Cápita</a><a href="crecimiento.html" >📈 Crecimiento PIB</a><a href="brasil.html" >🇧🇷 Brasil</a><a href="mexico.html" >🇲🇽 México</a><a href="argentina.html" >🇦🇷 Argentina</a><a href="colombia.html" >🇨🇴 Colombia</a><a href="chile.html" >🇨🇱 Chile</a><a href="peru.html" >🇵🇪 Perú</a><a href="venezuela.html" >🇻🇪 Venezuela</a><a href="ecuador.html" >🇪🇨 Ecuador</a><a href="bolivia.html" >🇧🇴 Bolivia</a><a href="uruguay.html" >🇺🇾 Uruguay</a><a href="paraguay.html" >🇵🇾 Paraguay</a><a href="grandes-economias.html" >🏆 Grandes Economías</a><a href="medianas-economias.html" >📊 Medianas Economías</a><a href="pequenas-economias.html" >🔹 Pequeñas Economías</a><a href="covid-impact.html" >🦠 Impacto COVID-19</a><a href="commodities.html" >🛢 Boom Commodities</a><a href="venezuela-crisis.html" >⚠️ Crisis Venezuela</a><a href="tendencias.html" >📊 Tendencias</a><a href="comparativas.html" >⚖️ Comparativas</a><a href="methodology.html" >📋 Metodología</a><a href="data.html" class="active">📊 Datos</a><a href="sitemap.html" >🗺 Sitemap</a></nav>
+<div class="container">
+<h1>📊 Dataset Completo — PIB América Latina 2000-2024</h1>
+<p class="subtitle">11 países | 3 variables | Harvard Dataverse DOI: 10.7910/DVN/KAAUOR</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+<span class="badge">11 países</span><span class="badge">3 tablas</span><span class="badge">CC0 1.0</span>
+</div>
+<div class="abstract"><strong>Acceso completo:</strong> Para descargar los archivos originales (.tab), visite <a href="https://doi.org/10.7910/DVN/KAAUOR" target="_blank">Harvard Dataverse (DOI: 10.7910/DVN/KAAUOR)</a>.</div>
+
+<h2>PIB Nominal (miles de millones USD)</h2>
+<div style="overflow-x:auto"><table><thead><tr><th>País</th><th>2000</th><th>2005</th><th>2010</th><th>2015</th><th>2020</th><th>2023</th><th>2024</th></tr></thead>
+<tbody><tr><td><strong>Brasil</strong></td><td>$644B</td><td>$882B</td><td>$2209B</td><td>$1800B</td><td>$1445B</td><td>$2130B</td><td>$2186B</td></tr><tr><td><strong>México</strong></td><td>$707B</td><td>$849B</td><td>$1057B</td><td>$1172B</td><td>$1076B</td><td>$1322B</td><td>$1411B</td></tr><tr><td><strong>Argentina</strong></td><td>$284B</td><td>$199B</td><td>$423B</td><td>$643B</td><td>$383B</td><td>$641B</td><td>$621B</td></tr><tr><td><strong>Colombia</strong></td><td>$99B</td><td>$146B</td><td>$287B</td><td>$293B</td><td>$271B</td><td>$363B</td><td>$373B</td></tr><tr><td><strong>Chile</strong></td><td>$79B</td><td>$119B</td><td>$218B</td><td>$243B</td><td>$253B</td><td>$335B</td><td>$344B</td></tr><tr><td><strong>Perú</strong></td><td>$53B</td><td>$76B</td><td>$148B</td><td>$190B</td><td>$203B</td><td>$267B</td><td>$289B</td></tr><tr><td><strong>Venezuela</strong></td><td>$117B</td><td>$145B</td><td>$394B</td><td>$331B</td><td>$47B</td><td>$97B</td><td>$102B</td></tr><tr><td><strong>Ecuador</strong></td><td>$37B</td><td>$41B</td><td>$70B</td><td>$100B</td><td>$99B</td><td>$118B</td><td>$124B</td></tr><tr><td><strong>Bolivia</strong></td><td>$8B</td><td>$10B</td><td>$20B</td><td>$33B</td><td>$37B</td><td>$45B</td><td>$48B</td></tr><tr><td><strong>Uruguay</strong></td><td>$20B</td><td>$17B</td><td>$40B</td><td>$54B</td><td>$53B</td><td>$71B</td><td>$77B</td></tr><tr><td><strong>Paraguay</strong></td><td>$10B</td><td>$10B</td><td>$20B</td><td>$30B</td><td>$35B</td><td>$43B</td><td>$47B</td></tr></tbody></table></div>
+
+<h2>PIB per Cápita (USD corrientes)</h2>
+<div style="overflow-x:auto"><table><thead><tr><th>País</th><th>2000</th><th>2005</th><th>2010</th><th>2015</th><th>2020</th><th>2023</th><th>2024</th></tr></thead>
+<tbody><tr><td><strong>Brasil</strong></td><td>$3757</td><td>$4736</td><td>$11.288</td><td>$8812</td><td>$6796</td><td>$10.079</td><td>$10.216</td></tr><tr><td><strong>México</strong></td><td>$7115</td><td>$7910</td><td>$9276</td><td>$9545</td><td>$8346</td><td>$10.046</td><td>$10.634</td></tr><tr><td><strong>Argentina</strong></td><td>$7673</td><td>$5099</td><td>$10.498</td><td>$14.537</td><td>$8433</td><td>$13.694</td><td>$12.645</td></tr><tr><td><strong>Colombia</strong></td><td>$2343</td><td>$3336</td><td>$6249</td><td>$5888</td><td>$5341</td><td>$7001</td><td>$7106</td></tr><tr><td><strong>Chile</strong></td><td>$5105</td><td>$7409</td><td>$12.808</td><td>$13.416</td><td>$13.231</td><td>$16.791</td><td>$17.020</td></tr><tr><td><strong>Perú</strong></td><td>$2043</td><td>$2804</td><td>$5219</td><td>$6207</td><td>$6148</td><td>$7822</td><td>$8317</td></tr><tr><td><strong>Venezuela</strong></td><td>$4589</td><td>$5388</td><td>$13.644</td><td>$10.089</td><td>$1618</td><td>$3281</td><td>$3426</td></tr><tr><td><strong>Ecuador</strong></td><td>$2718</td><td>$3007</td><td>$4643</td><td>$6134</td><td>$5635</td><td>$6531</td><td>$6758</td></tr><tr><td><strong>Bolivia</strong></td><td>$998</td><td>$1055</td><td>$1970</td><td>$3096</td><td>$3195</td><td>$3741</td><td>$3954</td></tr><tr><td><strong>Uruguay</strong></td><td>$6095</td><td>$5036</td><td>$11.974</td><td>$15.474</td><td>$15.438</td><td>$20.555</td><td>$22.150</td></tr><tr><td><strong>Paraguay</strong></td><td>$1659</td><td>$1676</td><td>$3181</td><td>$4506</td><td>$5018</td><td>$5952</td><td>$6413</td></tr></tbody></table></div>
+
+<h2>Crecimiento Anual PIB Real (%)</h2>
+<div style="overflow-x:auto"><table><thead><tr><th>País</th><th>2000</th><th>2005</th><th>2010</th><th>2015</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th></tr></thead>
+<tbody><tr><td><strong>Brasil</strong></td><td style="color:#3fb950">4.3%</td><td style="color:#3fb950">3.2%</td><td style="color:#3fb950">7.5%</td><td style="color:#f85149">-3.8%</td><td style="color:#f85149">-4.1%</td><td style="color:#3fb950">4.6%</td><td style="color:#3fb950">2.9%</td><td style="color:#3fb950">2.9%</td><td style="color:#3fb950">3.1%</td></tr><tr><td><strong>México</strong></td><td style="color:#3fb950">6.6%</td><td style="color:#3fb950">3.3%</td><td style="color:#3fb950">5.1%</td><td style="color:#3fb950">3.3%</td><td style="color:#f85149">-8.6%</td><td style="color:#3fb950">4.8%</td><td style="color:#3fb950">3.9%</td><td style="color:#3fb950">3.2%</td><td style="color:#3fb950">1.5%</td></tr><tr><td><strong>Argentina</strong></td><td style="color:#f85149">-0.8%</td><td style="color:#3fb950">9.2%</td><td style="color:#3fb950">10.1%</td><td style="color:#3fb950">2.7%</td><td style="color:#f85149">-9.9%</td><td style="color:#3fb950">10.4%</td><td style="color:#3fb950">5%</td><td style="color:#f85149">-1.6%</td><td style="color:#f85149">-3.5%</td></tr><tr><td><strong>Colombia</strong></td><td style="color:#3fb950">2.9%</td><td style="color:#3fb950">4.7%</td><td style="color:#3fb950">4%</td><td style="color:#3fb950">3%</td><td style="color:#f85149">-6.8%</td><td style="color:#3fb950">10.7%</td><td style="color:#3fb950">7.3%</td><td style="color:#3fb950">0.6%</td><td style="color:#3fb950">1.7%</td></tr><tr><td><strong>Chile</strong></td><td style="color:#3fb950">4.5%</td><td style="color:#3fb950">5.6%</td><td style="color:#3fb950">5.8%</td><td style="color:#3fb950">2.4%</td><td style="color:#f85149">-6.1%</td><td style="color:#3fb950">11.7%</td><td style="color:#3fb950">2.4%</td><td style="color:#f85149">-0.2%</td><td style="color:#3fb950">2.4%</td></tr><tr><td><strong>Perú</strong></td><td style="color:#3fb950">2.7%</td><td style="color:#3fb950">6.3%</td><td style="color:#3fb950">8.5%</td><td style="color:#3fb950">3.3%</td><td style="color:#f85149">-11%</td><td style="color:#3fb950">13.3%</td><td style="color:#3fb950">2.7%</td><td style="color:#f85149">-0.6%</td><td style="color:#3fb950">3.1%</td></tr><tr><td><strong>Venezuela</strong></td><td style="color:#3fb950">3.7%</td><td style="color:#3fb950">10.3%</td><td style="color:#f85149">-1.5%</td><td style="color:#f85149">-6.2%</td><td style="color:#f85149">-30%</td><td style="color:#3fb950">0.5%</td><td style="color:#3fb950">8%</td><td style="color:#3fb950">4%</td><td style="color:#3fb950">3%</td></tr><tr><td><strong>Ecuador</strong></td><td style="color:#3fb950">2.8%</td><td style="color:#3fb950">6%</td><td style="color:#3fb950">3.5%</td><td style="color:#3fb950">0.1%</td><td style="color:#f85149">-7.8%</td><td style="color:#3fb950">4.2%</td><td style="color:#3fb950">4%</td><td style="color:#3fb950">2.5%</td><td style="color:#3fb950">1.7%</td></tr><tr><td><strong>Bolivia</strong></td><td style="color:#3fb950">2.5%</td><td style="color:#3fb950">4.4%</td><td style="color:#3fb950">4.1%</td><td style="color:#3fb950">4.9%</td><td style="color:#f85149">-8.8%</td><td style="color:#3fb950">6.1%</td><td style="color:#3fb950">3.8%</td><td style="color:#3fb950">2.7%</td><td style="color:#3fb950">2.2%</td></tr><tr><td><strong>Uruguay</strong></td><td style="color:#f85149">-1.4%</td><td style="color:#3fb950">6.8%</td><td style="color:#3fb950">7.8%</td><td style="color:#3fb950">0.4%</td><td style="color:#f85149">-6.9%</td><td style="color:#3fb950">5.3%</td><td style="color:#3fb950">4.9%</td><td style="color:#3fb950">0.4%</td><td style="color:#3fb950">3.2%</td></tr><tr><td><strong>Paraguay</strong></td><td style="color:#f85149">-3.3%</td><td style="color:#3fb950">2.9%</td><td style="color:#3fb950">13.1%</td><td style="color:#3fb950">3%</td><td style="color:#f85149">-0.8%</td><td style="color:#3fb950">4%</td><td style="color:#3fb950">0.2%</td><td style="color:#f85149">-1.4%</td><td style="color:#3fb950">3.8%</td></tr></tbody></table></div>
+
+<div class="citation"><h3>Cómo citar</h3><p><strong>APA:</strong> de la Serna, J. M. (2026). Evolución del PIB en Latinoamérica por País (2000-2024). Harvard Dataverse. https://doi.org/10.7910/DVN/KAAUOR</p><pre>@dataset{delaserna2026gdp,
+  author={de la Serna, Juan Moises},
+  title={Evolución del PIB en Latinoamérica por País (2000-2024)},
+  year={2026},
+  publisher={Harvard Dataverse},
+  doi={10.7910/DVN/KAAUOR},
+  url={https://doi.org/10.7910/DVN/KAAUOR}
+}</pre></div>
+<footer><p>DOI: <a href="https://doi.org/10.7910/DVN/KAAUOR" target="_blank">10.7910/DVN/KAAUOR</a> &nbsp;|&nbsp; Autor: de la Serna, J. M. (UNIR) &nbsp;|&nbsp; Fuente: Banco Mundial / CEPAL &nbsp;|&nbsp; Licencia: CC0 1.0</p></footer>
+</div>
+</body></html>
