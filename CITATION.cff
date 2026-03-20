@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it using the metadata below."
+type: dataset
+title: "GDP Evolution in Latin America (2000-2024)"
+authors:
+  - family-names: "de la Serna Tuya"
+    given-names: "Juan Moisés"
+    orcid: "https://orcid.org/0000-0002-8401-8018"
+    affiliation: "Universidad Internacional de La Rioja (UNIR)"
+    email: "juanmoises.delaserna@unir.net"
+doi: 10.7910/DVN/KAAUOR
+url: https://doi.org/10.7910/DVN/KAAUOR
+repository-code: "https://github.com/juanmoisesd/gdp-latam-2000-2024"
+license: CC0-1.0
+date-released: "2026-03-20"
+keywords:
+  - "gdp"
+  - "latin-america"
+  - "economics"
+  - "dashboard"
+  - "open-data"
+  - "harvard-dataverse"
+abstract: "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR"
