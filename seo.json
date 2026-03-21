@@ -1,0 +1,19 @@
+{
+  "title": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+  "description": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+  "keywords": "dashboard, economics, gdp, harvard-dataverse, latin-america, open-data",
+  "author": "Juan Moisés de la Serna Tuya",
+  "orcid": "https://orcid.org/0000-0002-8401-8018",
+  "canonical": "https://juanmoisesd.github.io/gdp-latam-2000-2024/",
+  "og:title": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+  "og:description": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+  "og:url": "https://juanmoisesd.github.io/gdp-latam-2000-2024/",
+  "og:type": "dataset",
+  "twitter:card": "summary",
+  "twitter:title": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+  "twitter:description": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+  "schema_type": "Dataset",
+  "license": "CC0-1.0",
+  "datePublished": "2026-03-20",
+  "language": "es, en"
+}
