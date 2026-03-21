@@ -1,154 +1,62 @@
 <!DOCTYPE html>
-<html lang="es">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#0d1117;color:#c9d1d9;font-family:'Segoe UI',Arial,sans-serif;line-height:1.7}
-a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}
-nav{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-nav .logo{font-weight:700;font-size:1.05em;color:#f0f6fc;margin-right:10px;white-space:nowrap}
-nav a{color:#8b949e;font-size:.8em;padding:4px 8px;border-radius:4px;white-space:nowrap}
-nav a:hover,nav a.active{background:#21262d;color:#58a6ff;text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:24px 20px}
-h1{font-size:1.9em;color:#f0f6fc;margin-bottom:8px}
-h2{font-size:1.35em;color:#e6edf3;margin:28px 0 12px;border-bottom:1px solid #30363d;padding-bottom:6px}
-h3{font-size:1.1em;color:#cdd9e5;margin:18px 0 8px}
-.subtitle{color:#8b949e;font-size:1.05em;margin-bottom:20px}
-.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:3px 12px;font-size:.8em;color:#8b949e;margin:0 4px 4px 0}
-.abstract{background:#161b22;border-left:4px solid #3fb950;border-radius:0 8px 8px 0;padding:18px 20px;margin:20px 0;font-size:.97em}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
-.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;text-align:center}
-.kpi .val{font-size:2em;font-weight:700;color:#3fb950}
-.kpi .lbl{font-size:.82em;color:#8b949e;margin-top:4px}
-.chart-wrap{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin:16px 0}
-.citation{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:18px;margin:20px 0;font-size:.85em}
-.citation pre{background:#0d1117;border-radius:6px;padding:12px;overflow-x:auto;white-space:pre-wrap;font-size:.9em;color:#7ee787}
-table{width:100%;border-collapse:collapse;font-size:.88em;margin:10px 0}
-th{background:#21262d;color:#cdd9e5;padding:10px 8px;text-align:left;border-bottom:2px solid #30363d}
-td{padding:8px 8px;border-bottom:1px solid #21262d;color:#8b949e}
-tr:hover td{background:#161b22;color:#c9d1d9}
-footer{background:#161b22;border-top:1px solid #30363d;padding:20px;text-align:center;color:#484f58;font-size:.85em;margin-top:40px}
-</style>
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-<title>Evolución del PIB en América Latina 2000-2024 | Dashboard Interactivo</title>
-<meta name="description" content="Dashboard interactivo sobre la evolución del PIB en América Latina 2000-2024. PIB nominal, PIB per cápita y crecimiento anual para 11 países. Datos del Banco Mundial y CEPAL. DOI: 10.7910/DVN/KAAUOR">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR">
+  <meta name="author" content="Juan Moisés de la Serna Tuya">
+  <meta name="keywords" content="dashboard, economics, gdp, harvard-dataverse, latin-america, open-data">
+  <meta property="og:title" content="Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR">
+  <meta property="og:description" content="Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR">
+  <meta property="og:url" content="https://juanmoisesd.github.io/gdp-latam-2000-2024/">
+  <title>Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+    "description": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
+    "url": "https://github.com/juanmoisesd/gdp-latam-2000-2024",
+    "author": {
+      "@type": "Person",
+      "name": "Juan Moisés de la Serna Tuya",
+      "identifier": "https://orcid.org/0000-0002-8401-8018"
+    },
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "datePublished": "2026-03-20",
+    "keywords": "dashboard, economics, gdp, harvard-dataverse, latin-america, open-data"
+  }
+  </script>
 </head>
 <body>
-<nav><span class="logo">📈 PIB Latinoamérica 2000-2024</span><a href="index.html" class="active">🏠 Inicio</a><a href="pib-nominal.html" >💰 PIB Nominal</a><a href="pib-percapita.html" >👤 PIB per Cápita</a><a href="crecimiento.html" >📈 Crecimiento PIB</a><a href="brasil.html" >🇧🇷 Brasil</a><a href="mexico.html" >🇲🇽 México</a><a href="argentina.html" >🇦🇷 Argentina</a><a href="colombia.html" >🇨🇴 Colombia</a><a href="chile.html" >🇨🇱 Chile</a><a href="peru.html" >🇵🇪 Perú</a><a href="venezuela.html" >🇻🇪 Venezuela</a><a href="ecuador.html" >🇪🇨 Ecuador</a><a href="bolivia.html" >🇧🇴 Bolivia</a><a href="uruguay.html" >🇺🇾 Uruguay</a><a href="paraguay.html" >🇵🇾 Paraguay</a><a href="grandes-economias.html" >🏆 Grandes Economías</a><a href="medianas-economias.html" >📊 Medianas Economías</a><a href="pequenas-economias.html" >🔹 Pequeñas Economías</a><a href="covid-impact.html" >🦠 Impacto COVID-19</a><a href="commodities.html" >🛢 Boom Commodities</a><a href="venezuela-crisis.html" >⚠️ Crisis Venezuela</a><a href="tendencias.html" >📊 Tendencias</a><a href="comparativas.html" >⚖️ Comparativas</a><a href="methodology.html" >📋 Metodología</a><a href="data.html" >📊 Datos</a><a href="sitemap.html" >🗺 Sitemap</a></nav>
-<div style="background:linear-gradient(135deg,#0d3320 0%,#0d1117 60%);padding:60px 20px;text-align:center">
-<div style="font-size:3em;margin-bottom:16px">📈</div>
-<h1 style="font-size:2.4em;color:#f0f6fc;margin-bottom:12px">PIB en América Latina 2000-2024</h1>
-<p style="color:#8b949e;font-size:1.1em;max-width:700px;margin:0 auto 24px">
-Base de datos macroeconómica: PIB nominal, PIB per cápita y crecimiento anual para 11 países latinoamericanos durante 25 años de historia económica
-</p>
-<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
-<span class="badge">11 países</span><span class="badge">2000-2024</span>
-<span class="badge">3 variables</span><span class="badge">🏦 Harvard Dataverse</span>
-<span class="badge">DOI: 10.7910/DVN/KAAUOR</span><span class="badge">Banco Mundial / CEPAL</span>
-</div>
-</div>
-
-<div class="container">
-<div class="abstract">
-<strong>Abstract:</strong> Este dataset compila la evolución del Producto Interior Bruto (PIB) nominal en dólares corrientes (miles de millones USD), el PIB per cápita (USD corrientes) y las tasas de crecimiento anual del PIB real (%) para las 11 principales economías de América Latina entre 2000 y 2024. El período cubre el boom de los commodities (2003-2013), la crisis financiera global (2008-2009), el ciclo bajista post-2014 y el impacto sin precedentes del COVID-19 (2020). Fuente: Banco Mundial (WDI), FMI (WEO) y CEPAL.
-</div>
-
-<div class="kpis">
-<div class="kpi"><div class="val">$6.6T</div><div class="lbl">💰 PIB total LATAM 2024<br>(11 países, USD)</div></div>
-<div class="kpi"><div class="val">$2.19T</div><div class="lbl">🇧🇷 Brasil 2024<br>(mayor economía)</div></div>
-<div class="kpi"><div class="val">+239%</div><div class="lbl">📈 Crecimiento promedio<br>PIB nominal 2000-2024</div></div>
-<div class="kpi"><div class="val">-30%</div><div class="lbl">⚠️ Venezuela 2020<br>(mayor contracción)</div></div>
-</div>
-
-<h2>PIB Nominal Total LATAM 2000-2024 (miles de millones USD)</h2>
-<div class="chart-wrap"><div id="i1" style="height:420px"></div></div>
-
-<h2>PIB Nominal por País — Evolución 2000-2024</h2>
-<div class="chart-wrap"><div id="i2" style="height:440px"></div></div>
-
-<h2>PIB per Cápita 2024 — Ranking Regional</h2>
-<div class="chart-wrap"><div id="i3" style="height:420px"></div></div>
-
-<h2>Crecimiento Anual PIB Real % — 2020 (COVID-19)</h2>
-<div class="chart-wrap"><div id="i4" style="height:380px"></div></div>
-
-<h2>Navegación por Tema</h2>
-<div class="kpis" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
-<a href="pib-nominal.html" style="text-decoration:none"><div class="kpi" style="cursor:pointer;transition:all .2s"><div class="val" style="font-size:1.3em">💰 PIB Nominal</div><div class="lbl">Miles de millones USD, todos los países</div></div></a><a href="pib-percapita.html" style="text-decoration:none"><div class="kpi" style="cursor:pointer;transition:all .2s"><div class="val" style="font-size:1.3em">👤 PIB per Cápita</div><div class="lbl">USD corrientes por habitante</div></div></a><a href="crecimiento.html" style="text-decoration:none"><div class="kpi" style="cursor:pointer;transition:all .2s"><div class="val" style="font-size:1.3em">📈 Crecimiento</div><div class="lbl">Tasas anuales PIB real %</div></div></a><a href="grandes-economias.html" style="text-decoration:none"><div class="kpi" style="cursor:pointer;transition:all .2s"><div class="val" style="font-size:1.3em">🏆 Grandes Economías</div><div class="lbl">Brasil, México, Argentina</div></div></a><a href="covid-impact.html" style="text-decoration:none"><div class="kpi" style="cursor:pointer;transition:all .2s"><div class="val" style="font-size:1.3em">🦠 COVID-19</div><div class="lbl">Impacto en el PIB 2020-2021</div></div></a><a href="venezuela-crisis.html" style="text-decoration:none"><div class="kpi" style="cursor:pointer;transition:all .2s"><div class="val" style="font-size:1.3em">⚠️ Venezuela</div><div class="lbl">Crisis económica 2013-2024</div></div></a>
-</div>
-
-<div class="citation"><h3>Cómo citar</h3><p><strong>APA:</strong> de la Serna, J. M. (2026). Evolución del PIB en Latinoamérica por País (2000-2024). Harvard Dataverse. https://doi.org/10.7910/DVN/KAAUOR</p><pre>@dataset{delaserna2026gdp,
-  author={de la Serna, Juan Moises},
-  title={Evolución del PIB en Latinoamérica por País (2000-2024)},
-  year={2026},
-  publisher={Harvard Dataverse},
-  doi={10.7910/DVN/KAAUOR},
-  url={https://doi.org/10.7910/DVN/KAAUOR}
-}</pre></div>
-<footer><p>DOI: <a href="https://doi.org/10.7910/DVN/KAAUOR" target="_blank">10.7910/DVN/KAAUOR</a> &nbsp;|&nbsp; Autor: de la Serna, J. M. (UNIR) &nbsp;|&nbsp; Fuente: Banco Mundial / CEPAL &nbsp;|&nbsp; Licencia: CC0 1.0</p></footer>
-</div>
-
-<script>
-const CS = ["Brasil","México","Argentina","Colombia","Chile","Perú","Venezuela","Ecuador","Bolivia","Uruguay","Paraguay"];
-const PIB = {"Brasil":[644,882,2209,1800,1445,2130,2186],"México":[707,849,1057,1172,1076,1322,1411],"Argentina":[284,199,423,643,383,641,621],"Colombia":[99,146,287,293,271,363,373],"Chile":[79,119,218,243,253,335,344],"Perú":[53,76,148,190,203,267,289],"Venezuela":[117,145,394,331,47,97,102],"Ecuador":[37,41,70,100,99,118,124],"Bolivia":[8,10,20,33,37,45,48],"Uruguay":[20,17,40,54,53,71,77],"Paraguay":[10,10,20,30,35,43,47]};
-const PERCAP = {"Brasil":[3757,4736,11288,8812,6796,10079,10216],"México":[7115,7910,9276,9545,8346,10046,10634],"Argentina":[7673,5099,10498,14537,8433,13694,12645],"Colombia":[2343,3336,6249,5888,5341,7001,7106],"Chile":[5105,7409,12808,13416,13231,16791,17020],"Perú":[2043,2804,5219,6207,6148,7822,8317],"Venezuela":[4589,5388,13644,10089,1618,3281,3426],"Ecuador":[2718,3007,4643,6134,5635,6531,6758],"Bolivia":[998,1055,1970,3096,3195,3741,3954],"Uruguay":[6095,5036,11974,15474,15438,20555,22150],"Paraguay":[1659,1676,3181,4506,5018,5952,6413]};
-const CREC = {"Brasil":[4.3,3.2,7.5,-3.8,-4.1,4.6,2.9,2.9,3.1],"México":[6.6,3.3,5.1,3.3,-8.6,4.8,3.9,3.2,1.5],"Argentina":[-0.8,9.2,10.1,2.7,-9.9,10.4,5,-1.6,-3.5],"Colombia":[2.9,4.7,4,3,-6.8,10.7,7.3,0.6,1.7],"Chile":[4.5,5.6,5.8,2.4,-6.1,11.7,2.4,-0.2,2.4],"Perú":[2.7,6.3,8.5,3.3,-11,13.3,2.7,-0.6,3.1],"Venezuela":[3.7,10.3,-1.5,-6.2,-30,0.5,8,4,3],"Ecuador":[2.8,6,3.5,0.1,-7.8,4.2,4,2.5,1.7],"Bolivia":[2.5,4.4,4.1,4.9,-8.8,6.1,3.8,2.7,2.2],"Uruguay":[-1.4,6.8,7.8,0.4,-6.9,5.3,4.9,0.4,3.2],"Paraguay":[-3.3,2.9,13.1,3,-0.8,4,0.2,-1.4,3.8]};
-const YEARS = [2000,2005,2010,2015,2020,2023,2024];
-const CREC_YEARS = [2000,2005,2010,2015,2020,2021,2022,2023,2024];
-const COLS = ['#3fb950','#58a6ff','#f85149','#e3b341','#d2a8ff','#ffa657','#ff7b72','#79c0ff','#a5d6ff','#7ee787','#ffb347'];
-
-// I1: stacked area total LATAM
-Plotly.newPlot('i1',CS.map((c,i)=>({
-  type:'scatter',mode:'lines',name:c,stackgroup:'one',fill:'tonexty',
-  x:YEARS,y:PIB[c],line:{color:COLS[i],width:0.5},fillcolor:COLS[i]+'99',
-  hovertemplate:'<b>'+c+'</b><br>Año: %{x}<br>PIB: $%{y}B USD<extra></extra>'
-})),{
-  paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},
-  xaxis:{title:'Año',color:'#8b949e',gridcolor:'#30363d',tickvals:YEARS},
-  yaxis:{title:'Miles de millones USD',color:'#8b949e',gridcolor:'#30363d'},
-  legend:{bgcolor:'#0d1117',bordercolor:'#30363d',orientation:'v'},
-  margin:{l:80,r:20,t:20,b:60},height:420
-});
-
-// I2: lines by country
-Plotly.newPlot('i2',CS.map((c,i)=>({
-  type:'scatter',mode:'lines+markers',name:c,
-  x:YEARS,y:PIB[c],line:{color:COLS[i],width:2.5},marker:{size:8},
-  hovertemplate:'<b>'+c+'</b><br>%{x}: $%{y}B USD<extra></extra>'
-})),{
-  paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},
-  xaxis:{title:'Año',color:'#8b949e',gridcolor:'#30363d',tickvals:YEARS},
-  yaxis:{title:'Miles de millones USD',color:'#8b949e',gridcolor:'#30363d'},
-  legend:{bgcolor:'#0d1117',bordercolor:'#30363d'},
-  margin:{l:80,r:20,t:20,b:60},height:440
-});
-
-// I3: bar percap 2024 ranking
-const pc24 = CS.map(c=>({c,v:PERCAP[c][6]})).sort((a,b)=>b.v-a.v);
-Plotly.newPlot('i3',[{
-  type:'bar',orientation:'h',
-  x:pc24.map(d=>d.v).reverse(),y:pc24.map(d=>d.c).reverse(),
-  marker:{color:pc24.map(d=>d.v>15000?'#3fb950':d.v>8000?'#58a6ff':d.v>4000?'#e3b341':'#f85149').reverse()},
-  text:pc24.map(d=>'$'+d.v.toLocaleString()).reverse(),textposition:'outside',
-  hovertemplate:'<b>%{y}</b><br>PIB per cápita: $%{x} USD<extra></extra>'
-}],{
-  paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},
-  xaxis:{title:'USD corrientes',color:'#8b949e',gridcolor:'#30363d'},
-  yaxis:{color:'#8b949e'},margin:{l:120,r:120,t:20,b:60},height:420
-});
-
-// I4: COVID bar 2020
-const covid = CS.map(c=>({c,v:CREC[c][4]})).sort((a,b)=>a.v-b.v);
-Plotly.newPlot('i4',[{
-  type:'bar',x:covid.map(d=>d.c),y:covid.map(d=>d.v),
-  marker:{color:covid.map(d=>d.v>=0?'#3fb950':'#f85149')},
-  text:covid.map(d=>d.v+'%'),textposition:'outside',
-  hovertemplate:'<b>%{x}</b><br>Crecimiento 2020: %{y}%<extra></extra>'
-}],{
-  paper_bgcolor:'#161b22',plot_bgcolor:'#161b22',font:{color:'#c9d1d9',size:12},
-  xaxis:{color:'#8b949e',tickangle:-30},
-  yaxis:{title:'Variación PIB real %',color:'#8b949e',gridcolor:'#30363d',zeroline:true,zerolinecolor:'#8b949e'},
-  margin:{l:60,r:20,t:20,b:80}
-});
-</script>
-</body></html>
+  <header>
+    <h1>Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR</h1>
+    <p class="subtitle">Open Dataset by <a href="https://orcid.org/0000-0002-8401-8018">Juan Moisés de la Serna Tuya</a></p>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR</p>
+      <ul>
+        <li><strong>Author:</strong> <a href="https://orcid.org/0000-0002-8401-8018">Juan Moisés de la Serna Tuya</a></li>
+        <li><strong>Institution:</strong> Universidad Internacional de La Rioja (UNIR)</li>
+        <li><strong>License:</strong> <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a></li>
+        <li><strong>Repository:</strong> <a href="https://github.com/juanmoisesd/gdp-latam-2000-2024">GitHub</a></li>
+      </ul>
+    </section>
+    <section id="cite">
+      <h2>How to Cite</h2>
+      <code>de la Serna Tuya, J.M. (2026). Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR. GitHub. https://github.com/juanmoisesd/gdp-latam-2000-2024</code>
+    </section>
+    <section id="data">
+      <h2>Access Data</h2>
+      <a class="btn" href="https://github.com/juanmoisesd/gdp-latam-2000-2024">View on GitHub</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Juan Moisés de la Serna Tuya | <a href="https://orcid.org/0000-0002-8401-8018">ORCID</a> | <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
