@@ -1,0 +1,30 @@
+{
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/juanmoisesd/gdp-latam-2000-2024",
+      "relation": "isDocumentedBy",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://orcid.org/0000-0002-8401-8018",
+      "relation": "isCreatedBy",
+      "scheme": "url",
+      "resource_type": "person"
+    },
+    {
+      "identifier": "https://juanmoisesd.github.io/gdp-latam-2000-2024/",
+      "relation": "isDescribedBy",
+      "scheme": "url",
+      "resource_type": "webpage"
+    },
+    {
+      "identifier": "https://github.com/juanmoisesd",
+      "relation": "isPartOf",
+      "scheme": "url",
+      "resource_type": "collection"
+    }
+  ],
+  "author": "Juan Moisés de la Serna Tuya",
+  "dataset": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR"
+}
