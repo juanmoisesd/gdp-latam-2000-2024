@@ -1,0 +1,23 @@
+{
+  "title": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries.",
+  "id": "juanmoisesd/gdp-latam-2000-2024",
+  "licenses": [
+    {
+      "name": "CC BY 4.0"
+    }
+  ],
+  "keywords": [
+    "cc0",
+    "citation",
+    "dashboard",
+    "dataset",
+    "development-economics",
+    "economics",
+    "fair-data",
+    "gdp",
+    "harvard-dataverse",
+    "iberoamerica"
+  ],
+  "description": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR\n\nDOI: https://github.com/juanmoisesd/gdp-latam-2000-2024\nGitHub: https://github.com/juanmoisesd/gdp-latam-2000-2024\nAuthor: de la Serna, Juan Moisés",
+  "isPrivate": false
+}
