@@ -1,45 +1,26 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
-  "description": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KAAUOR",
-  "url": "https://github.com/juanmoisesd/gdp-latam-2000-2024",
-  "codeRepository": "https://github.com/juanmoisesd/gdp-latam-2000-2024",
-  "dateCreated": "2026-03-20",
-  "dateModified": "2026-03-20",
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "name": "Interactive dashboard: GDP evolution in Latin America (2000-2024). 11 countries. DOI: 10.7910/DVN/KA",
   "version": "1.0.0",
+  "identifier": "https://github.com/juanmoisesd/gdp-latam-2000-2024",
+  "datePublished": "2025",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "codeRepository": "https://github.com/juanmoisesd/gdp-latam-2000-2024",
   "author": [
     {
       "@type": "Person",
       "givenName": "Juan Moisés",
-      "familyName": "de la Serna Tuya",
-      "@id": "https://orcid.org/0000-0002-8401-8018",
+      "familyName": "de la Serna",
       "affiliation": {
         "@type": "Organization",
         "name": "Universidad Internacional de La Rioja (UNIR)"
-      },
-      "email": "juanmoises.delaserna@unir.net"
+      }
     }
   ],
-  "keywords": [
-    "dashboard",
-    "economics",
-    "gdp",
-    "harvard-dataverse",
-    "latin-america",
-    "open-data"
+  "programmingLanguage": [
+    "Python",
+    "Jupyter Notebook"
   ],
-  "programmingLanguage": "HTML",
-  "maintainer": [
-    {
-      "@type": "Person",
-      "givenName": "Juan Moisés",
-      "familyName": "de la Serna Tuya"
-    }
-  ],
-  "funder": {
-    "@type": "Organization",
-    "name": "Universidad Internacional de La Rioja (UNIR)"
-  }
+  "keywords": "cc0, citation, dashboard, dataset, development-economics, economics, fair-data, gdp, harvard-dataverse, iberoamerica, juan-moises-de-la-serna, latam, latin-america, macroeconomics, open-data, open-science, orcid, research, zenodo"
 }
